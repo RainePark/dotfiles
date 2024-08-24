@@ -7,4 +7,5 @@
 !/rofi/*
 !/dunst/*
 !/i3/*
-!/i3blocks/*:
+!/i3blocks/*
+!/autostart/*
