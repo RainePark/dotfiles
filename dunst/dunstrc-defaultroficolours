@@ -1,0 +1,20 @@
+[global]
+    font = "Roboto Mono, Font Awesome 5 Free Regular"
+    origin = bottom-center
+    separator_color = "#eee8d5"
+    separator_width = 1
+    frame_color = "#eee8d5"
+    frame_width = 1
+
+[urgency_low]
+    background = "#202426"
+    foreground = "#eee8d5"
+
+[urgency_normal]
+    background = "#202426"
+    foreground = "#eee8d5"
+
+[urgency_critical]
+    background = "#202426"
+    foreground = "#eee8d5"
+
