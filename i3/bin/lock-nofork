@@ -43,10 +43,10 @@ i3lock \
   --indicator \
   --time-str="%H:%M:%S" \
   --date-str="%A %e %B %Y" \
-  --verif-text="Verifying..." \
+  --verif-text="Verifying" \
   --wrong-text="Incorrect" \
   --noinput="No Input" \
-  --lock-text="Locking..." \
+  --lock-text="Locking" \
   --lockfailed="Lock Failed" \
   --radius=115 \
   --ring-width=8 \

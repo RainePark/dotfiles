@@ -52,6 +52,9 @@ exec --no-startup-id feh --bg-scale $wallpaper
 # Add window transparency
 #exec --no-startup-id picom -CGb
 
+# Mute computer
+exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 0
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -234,7 +237,7 @@ bar {
   
   #font pango:NotoSansM Nerd Font 11
   font pango:JetBrainsMono Nerd Font 9.5
-  workspace_min_width 25
+  workspace_min_width 20
   strip_workspace_numbers yes
 
   colors {
