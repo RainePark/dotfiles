@@ -1,0 +1,34 @@
+swipe:
+  3:
+    left:
+      command: 'xdotool key super+Left'
+    right:
+      command: 'xdotool key super+Right'
+    up:
+      command: 'xdotool key super+Up'
+    down:
+      command: 'xdotool key super+Down'
+  4:
+    left:
+      command: "i3-msg 'workspace prev'"
+    right:
+      command: "i3-msg 'workspace next'"
+    up:
+      command: exec i3 layout default
+    down:
+      command: exec i3 layout stacked
+
+pinch:
+  2:
+    in:
+      command: 'xdotool key ctrl+minus'
+    out:
+      command: 'xdotool key ctrl+plus'
+
+threshold:
+  swipe: 0.3
+  pinch: 0.2
+
+interval:
+  swipe: 0.8
+  pinch: 0.6
