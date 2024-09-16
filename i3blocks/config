@@ -28,18 +28,18 @@ T_WARN=80
 DECIMALS=0
 color=#bd93f9
 
-[memory]
-command=$SCRIPT_DIR/memory
-label=
-interval=10
-color=#bd93f9
-
 [temperature]
 command=$SCRIPT_DIR/temperature
 label= 
 interval=10
 T_WARN=80
 T_CRIT=90
+color=#bd93f9
+
+[memory]
+command=$SCRIPT_DIR/memory
+label= 
+interval=10
 color=#bd93f9
 
 [disk_root]
