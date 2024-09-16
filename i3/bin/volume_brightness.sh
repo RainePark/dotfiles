@@ -15,6 +15,11 @@ function get_volume {
     pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]{1,3}(?=%)' | head -1
 }
 
+# Get the active output form pactl
+function get_active {
+	pactl list sinks | grep -A 20 $(pactl get-default-sink) | sed -n 's/.*Description: \(.*\)/\1/p'
+}
+
 # Uses regex to get mute status from pactl
 function get_mute {
     pactl get-sink-mute @DEFAULT_SINK@ | grep -Po '(?<=Mute: )(yes|no)'
@@ -46,8 +51,9 @@ function get_brightness_icon {
 # Displays a volume notification using dunstify
 function show_volume_notif {
     volume=$(get_mute)
+    device=$(get_active)
     get_volume_icon
-    dunstify -i audio-volume-muted-blocking -t 1000 -r 2593 -u normal "$volume_icon  $volume%" -h int:value:$volume -h string:hlcolor:$bar_color
+    dunstify -i audio-volume-muted-blocking -t 1000 -r 2593 -u normal "$volume_icon  $volume% ($device)" -h int:value:$volume -h string:hlcolor:$bar_color
 }
 
 # Displays a brightness notification using dunstify
