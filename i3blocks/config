@@ -4,6 +4,9 @@
 # and its website describes the configuration:
 #
 #     https://vivien.github.io/i3blocks
+
+# Adapted from https://github.com/fpaskali/i3wm-dracula
+
 SCRIPT_DIR=/home/raine/.config/i3blocks/blocklets
 
 # Global properties
