@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/sh     
+
+# Unmount cse to prevent system from freezing
+fusermount -zu "$HOME/cse"
 
 # Theme for i3lock-color
 # Accepts the background file location as the first argument

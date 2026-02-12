@@ -43,6 +43,12 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- $i3configlocation/bin/loc
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Blueman Applet
+exec --no-startup-id blueman-applet
+
+# Start notification service
+exec --no-startup-id /usr/bin/dunst
+
 # Start touchpad gestures
 exec --no-startup-id fusuma
 
@@ -55,9 +61,8 @@ exec --no-startup-id feh --bg-scale $wallpaper
 # Mute computer
 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 0
 
-# Start KDE Connect
-exec --no-startup-id kdeconnectd
-exec --no-startup-id kdeconnect-indicator
+# Start Tailscale systray
+exec --no-startup-id tailscale systray
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -262,6 +267,9 @@ bar {
 #bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 bindsym XF86MonBrightnessUp exec --no-startup-id $i3configlocation/bin/volume_brightness.sh brightness_up
 bindsym XF86MonBrightnessDown exec --no-startup-id $i3configlocation/bin/volume_brightness.sh brightness_down
+
+bindsym $mod+F3 exec --no-startup-id $i3configlocation/bin/volume_brightness.sh brightness_up
+bindsym $mod+F2 exec --no-startup-id $i3configlocation/bin/volume_brightness.sh brightness_down 
 
 # Lock shortcut
 bindsym $mod+o exec $i3configlocation/bin/lock $wallpaper
