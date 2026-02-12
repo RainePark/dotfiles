@@ -1,0 +1,10 @@
+#!/bin/bash
+
+LABEL=""
+BRIGHTNESS=$(brightnessctl -P get | head -n 1)
+
+if [ -n "$BRIGHTNESS" ]; then
+	echo $LABEL $BRIGHTNESS"%"
+else
+	exit
+fi

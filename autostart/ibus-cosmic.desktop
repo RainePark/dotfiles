@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=IBus Wayland for COSMIC
+Exec=sh -c "pkill -u $USER ibus; /usr/libexec/ibus-ui-gtk3 --enable-wayland-im --exec-daemon --daemon-args '--xim --panel disable'"
+NoDisplay=true
+X-GNOME-Autostart-Phase=Applications

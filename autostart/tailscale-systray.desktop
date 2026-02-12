@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Tailscale Systray
+GenericName=Network VPN
+Comment=Manage Tailscale connections
+# We use 'sh -c' to add a 5s delay so the system tray has time to load
+Exec=sh -c "sleep 5 && tailscale systray"
+Icon=network-vpn
+Terminal=false
+Categories=Network;System;
+StartupNotify=false
+X-GNOME-Autostart-enabled=true

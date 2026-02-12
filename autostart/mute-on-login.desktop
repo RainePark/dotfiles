@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Mute Audio on Startup
+Comment=Silences audio when logging into COSMIC
+# @DEFAULT_AUDIO_SINK@ is a special variable in WirePlumber 
+# that automatically finds your current default output.
+Exec=wpctl set-mute @DEFAULT_AUDIO_SINK@ 1
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+# Optional: Ensure this only runs in COSMIC, not i3
+OnlyShowIn=COSMIC;
